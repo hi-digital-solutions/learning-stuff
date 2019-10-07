@@ -23,8 +23,8 @@ namespace WordWrap
 
       private string GetAnswer(string words, int columnWidth)
       {
-        string substring = words.Substring(0, columnWidth);
-        return substring;
+        return words.Substring(0, columnWidth);
+        
       }
 
 
