@@ -6,15 +6,16 @@ using WordWrap;
 
 namespace WordWrapTest
 {
-    public class UnitTest1
+    public class WordWrapTests
     {
         [Fact]
-        public void GetBackOneLineOfText()
+        public void GetOneLineOfText()
         {
            
-            var expectedText = new Answer();
+            var answer = new Answer("Hello World");
+            var expectedWords = answer.Words;
 
-            expectedText.Should().Be("Hello World");
+            expectedWords.Should().Be("Hello World");
         }
     }
 

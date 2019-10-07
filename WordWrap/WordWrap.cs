@@ -13,6 +13,19 @@ namespace WordWrap
     }
     public class Answer
     {
-      public string hello;
+
+      public string Words;
+
+      public Answer(string words)
+      {
+        this.Words = GetAnswer(words);
+      }
+
+      private string GetAnswer(string words, int columnWidth = 10)
+      {
+        return words;
+      }
+
+
     }
 }
