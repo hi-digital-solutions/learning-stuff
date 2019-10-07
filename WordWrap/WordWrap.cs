@@ -16,12 +16,12 @@ namespace WordWrap
 
       public string Words;
 
-      public Answer(string words)
+      public Answer(string words, int columnWidth)
       {
-        this.Words = GetAnswer(words);
+        this.Words = GetAnswer(words,columnWidth);
       }
 
-      private string GetAnswer(string words, int columnWidth = 11)
+      private string GetAnswer(string words, int columnWidth)
       {
         string substring = words.Substring(0, columnWidth);
         return substring;

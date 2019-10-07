@@ -12,11 +12,14 @@ namespace WordWrapTest
         public void GetFirstLineOfText()
         {
             string input = "Hello World, this is the answer to everything!";
-            var answer = new Answer(input);
+            int columnWidth = 11;
+            var answer = new Answer(input,columnWidth);
             var expectedWords = answer.Words;
 
             expectedWords.Should().Be("Hello World");
         }
+
+     
     }
 
 }
