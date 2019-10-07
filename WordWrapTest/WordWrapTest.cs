@@ -9,10 +9,10 @@ namespace WordWrapTest
     public class WordWrapTests
     {
         [Fact]
-        public void GetOneLineOfText()
+        public void GetFirstLineOfText()
         {
-           
-            var answer = new Answer("Hello World");
+            string input = "Hello World, this is the answer to everything!";
+            var answer = new Answer(input);
             var expectedWords = answer.Words;
 
             expectedWords.Should().Be("Hello World");
