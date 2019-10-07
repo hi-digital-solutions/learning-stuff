@@ -21,9 +21,10 @@ namespace WordWrap
         this.Words = GetAnswer(words);
       }
 
-      private string GetAnswer(string words, int columnWidth = 10)
+      private string GetAnswer(string words, int columnWidth = 11)
       {
-        return words;
+        string substring = words.Substring(0, columnWidth);
+        return substring;
       }
 
 
