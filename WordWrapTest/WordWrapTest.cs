@@ -13,11 +13,14 @@ namespace WordWrapTest
         {
             string input = "Hello World, this is the answer to everything!";
             int columnWidth = 11;
+            string expected = "Hello World";
             var answer = new Answer(input,columnWidth);
-            var expectedWords = answer.Words;
+            var actual = answer.Words;
 
-            expectedWords.Should().Be("Hello World");
+            actual.Should().Be(expected);
         }
+
+       
 
      
     }
