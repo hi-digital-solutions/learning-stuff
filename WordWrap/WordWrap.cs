@@ -23,9 +23,15 @@ namespace WordWrap
 
       private string GetAnswer(string words, int columnWidth)
       {
-        
-        return words.Substring(0, columnWidth);
-        
+        if (words.Length <= columnWidth)
+        {
+          return words;
+        }
+        else
+        {
+          return words.Substring(0, columnWidth) + "\n" + words.Substring(columnWidth, columnWidth);
+        }
+
       }
 
 
