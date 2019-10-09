@@ -23,10 +23,7 @@ namespace WordWrap
 
       private string GetAnswer(string words, int columnWidth)
       {
-        while(words.Length > columnWidth){
-          //while the length of the string of words is greater than
-          //column width add a newline to the string after 
-        }
+        
         return words.Substring(0, columnWidth);
         
       }

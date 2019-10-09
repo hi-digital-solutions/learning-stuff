@@ -8,11 +8,10 @@ namespace WordWrapTest
 {
     public class WordWrapTests
     {
-        //Need to make the first test relevant to iteration
         [Fact]
-        public void GetFirstLineOfText()
+        public void GetOneLineOfText()
         {
-            string input = "Hello World, this is the answer to everything!";
+            string input = "Hello World";
             int columnWidth = 11;
             string expected = "Hello World";
             var answer = new Answer(input, columnWidth);
