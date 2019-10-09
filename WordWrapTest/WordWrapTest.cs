@@ -25,9 +25,9 @@ namespace WordWrapTest
         {
             string input = "Hello there, this should result in at least two lines!";
             int columnWidth = 11;
-            string expected = "Hello there\n, this should";
+            string expected = "Hello there\n, this shou";
             var answer = new Answer(input, columnWidth);
-            var actual = answer.Words;
+            var actual = answer.Words; 
 
             actual.Should().Be(expected);
         }
