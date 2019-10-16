@@ -27,11 +27,20 @@ namespace WordWrap
           {
             return words;
           }
+        else if (words.Length <= columnWidth*2)
+        {
+          int index = 0;
+            string nextLine = "\n" + words.Substring(index += columnWidth, columnWidth);
+            return words.Substring(0, columnWidth) + nextLine;
+        }
         else
           {
             int index = 0;
-            string nextLine = "\n" + words.Substring(index += columnWidth, columnWidth);
-            return words.Substring(0, columnWidth) + nextLine;
+            index +=columnWidth;
+            string nextLine = "\n" + words.Substring(index, columnWidth);
+            index += columnWidth;
+            string nextNextLine = "\n" + words.Substring(index, columnWidth);
+            return words.Substring(0, columnWidth) + nextLine + nextNextLine;
           }
 
       }

@@ -23,9 +23,21 @@ namespace WordWrapTest
         [Fact]
         public void GetTwoLinesofTextWithNoBreakWithinWords()
         {
-            string input = "Hello there, this should result in at least two lines!";
+            string input = "Hello there, this shou";
             int columnWidth = 11;
             string expected = "Hello there\n, this shou";
+            var answer = new Answer(input, columnWidth);
+            var actual = answer.Words; 
+
+            actual.Should().Be(expected);
+        }
+
+        [Fact]
+        public void GetThreeLinesofTextWithNoBreakWithinWords()
+        {
+            string input = "Hello there, this should return t";
+            int columnWidth = 11;
+            string expected = "Hello there\n, this shou\nld return t";
             var answer = new Answer(input, columnWidth);
             var actual = answer.Words; 
 
