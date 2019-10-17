@@ -48,7 +48,7 @@ namespace WordWrapTest
         [Fact]
         public void GetFourLinesofTextWords()
         {
-            string input = "Hello there, this should return t";
+            string input = "Hello there, this should return the right am";
             int columnWidth = 11;
             string expected = "Hello there\n, this shou\nld return t\nhe right am";
             var answer = new Answer(input, columnWidth);
