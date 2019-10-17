@@ -21,7 +21,7 @@ namespace WordWrapTest
         }
 
         [Fact]
-        public void GetTwoLinesofTextWithNoBreakWithinWords()
+        public void GetTwoLinesofTextWords()
         {
             string input = "Hello there, this shou";
             int columnWidth = 11;
@@ -33,7 +33,7 @@ namespace WordWrapTest
         }
 
         [Fact]
-        public void GetThreeLinesofTextWithNoBreakWithinWords()
+        public void GetThreeLinesofTextWords()
         {
             string input = "Hello there, this should return t";
             int columnWidth = 11;
