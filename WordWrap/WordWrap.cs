@@ -33,7 +33,7 @@ namespace WordWrap
             string nextLine = "\n" + words.Substring(index += columnWidth, columnWidth);
             return words.Substring(0, columnWidth) + nextLine;
         }
-        else
+        else if(words.Length <= columnWidth *3)
           {
             int index = 0;
             index +=columnWidth;
@@ -42,6 +42,17 @@ namespace WordWrap
             string nextNextLine = "\n" + words.Substring(index, columnWidth);
             return words.Substring(0, columnWidth) + nextLine + nextNextLine;
           }
+        else
+        {
+           int index = 0;
+            index +=columnWidth;
+            string nextLine = "\n" + words.Substring(index, columnWidth);
+            index += columnWidth;
+            string nextNextLine = "\n" + words.Substring(index, columnWidth);
+            index += columnWidth;
+            string nextNextNextLine = "\n" + words.Substring(index, columnWidth);
+            return words.Substring(0, columnWidth) + nextLine + nextNextLine + nextNextNextLine ;
+        }
 
       }
 
