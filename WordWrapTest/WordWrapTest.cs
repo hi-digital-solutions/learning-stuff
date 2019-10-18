@@ -9,6 +9,18 @@ namespace WordWrapTest
     public class WordWrapTests
     {
         [Fact]
+        public void GetEmptyLineOfText()
+        {
+            string input = "";
+            int columnWidth = 15;
+            string expected = "";
+            var answer = new Answer(input, columnWidth);
+            var actual = answer.Words;
+
+            actual.Should().Be(expected);
+        }
+
+        [Fact]
         public void GetOneLineOfText()
         {
             string input = "Hello World";

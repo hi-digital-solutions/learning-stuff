@@ -30,7 +30,7 @@ namespace WordWrap
             else if (words.Length <= columnWidth * 2)//columnWith Index grow by 1 with each line
             {
                 int index = 0;
-                string firstLine = words.Substring(0, columnWidth);
+                string firstLine = words.Substring(index, columnWidth);
                 index += columnWidth;
                 string nextLine = "\n" + words.Substring(index, columnWidth);
                 return firstLine + nextLine;
@@ -38,7 +38,7 @@ namespace WordWrap
             else 
             {
               int index = 0;
-              string firstLine = words.Substring(0, columnWidth);
+              string firstLine = words.Substring(index, columnWidth);
               string nextLine ="";
               int wordLength = words.Length;
               while( index <= wordLength)
