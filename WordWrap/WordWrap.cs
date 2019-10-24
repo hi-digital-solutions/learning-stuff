@@ -23,6 +23,10 @@ namespace WordWrap
 
         private string GetAnswer(string words, int columnWidth)
         {
+           if (words.Length < columnWidth)
+           {
+               return words;
+           }
            return "";
             
         }
