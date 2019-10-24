@@ -23,7 +23,7 @@ namespace WordWrap
 
         private string GetAnswer(string words, int columnWidth)
         {
-           return words;
+           return null;
             
         }
 
