@@ -20,6 +20,19 @@ namespace WordWrapTest
             actual.Should().Be(expected);
         }
 
+        [Fact]
+        public void GetOneLineOfText()
+        {
+            //Given
+            string input = "Word wrapping!";
+            int columnWidth = 15;
+            string expected = "Word wrapping!";
+            var answer = new Answer(input, columnWidth);
+            var actual = answer.Words;
+
+            actual.Should().Be(expected);
+        }
+
     }
 
 }
