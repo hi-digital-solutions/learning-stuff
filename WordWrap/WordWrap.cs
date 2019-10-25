@@ -25,13 +25,12 @@ namespace WordWrap
 
         private string GetAnswer(string words, int columnWidth)
         {
-            var inputWords = words.Trim();
-            if (inputWords.Length <= columnWidth)
-            {
-                return inputWords;
-            }
-            return "";
-
+           if (words.Length <= columnWidth)
+           {
+               return words;
+           }
+           return "";
+            
         }
 
 

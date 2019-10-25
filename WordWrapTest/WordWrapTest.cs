@@ -32,29 +32,17 @@ namespace WordWrapTest
             actual.Should().Be(expected);
         }
 
-         [Fact]
-        public void GetOneLineOfTextWithWhiteSpace()
-        {  
-            string input = "   Word wrapping!   ";
+        [Fact]
+        public void GetTwoLinesOfText()
+        {
+            string input = "Word wrapping is cool.";
             int columnWidth = 15;
-            string expected = "Word wrapping!";
+            string expected = "Word wrapping\n is cool.";
             var answer = new Answer(input, columnWidth);
             var actual = answer.Words;
 
             actual.Should().Be(expected);
         }
-
-        // [Fact]
-        // public void GetTwoLinesOfText()
-        // {
-        //     string input = "Word wrapping is cool.";
-        //     int columnWidth = 15;
-        //     string expected = "Word wrapping\n is cool.";
-        //     var answer = new Answer(input, columnWidth);
-        //     var actual = answer.Words;
-
-        //     actual.Should().Be(expected);
-        // }
 
     }
 
