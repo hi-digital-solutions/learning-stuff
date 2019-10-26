@@ -9,8 +9,7 @@ namespace WordWrapTest
     public class WordWrapTests
     {
         [Fact]
-        public void GetEmptyLineOfText()
-        {
+        public void GetEmptyLineOfText(){
             string input = "";
             int columnWidth = 15;
             string expected = "";
@@ -21,8 +20,7 @@ namespace WordWrapTest
         }
 
         [Fact]
-        public void GetOneLineOfText()
-        {  
+        public void GetOneLineOfText(){  
             string input = "Word wrapping!";
             int columnWidth = 15;
             string expected = "Word wrapping!";
@@ -33,8 +31,7 @@ namespace WordWrapTest
         }
 
         [Fact]
-           public void GetOneLineOfTextWithTrailingWhiteSpace()
-        {  
+        public void GetOneLineOfTextWithTrailingWhiteSpace(){  
             string input = "   Word wrapping!   ";
             int columnWidth = 15;
             string expected = "Word wrapping!";
@@ -43,6 +40,18 @@ namespace WordWrapTest
 
             actual.Should().Be(expected);
         }
+
+        [Fact]
+        public void GetTwoLinesOfText(){  
+            string input = "Word wrapping is so cool!";
+            int columnWidth = 15;
+            string expected = "Word wrapping\n is so cool!";
+            var answer = new Answer(input, columnWidth);
+            var actual = answer.Words;
+
+            actual.Should().Be(expected);
+        }
+
 
     }
 
