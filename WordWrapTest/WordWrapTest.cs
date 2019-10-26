@@ -33,11 +33,11 @@ namespace WordWrapTest
         }
 
         [Fact]
-        public void GetTwoLinesOfText()
-        {
-            string input = "Word wrapping is cool.";
+           public void GetOneLineOfTextWithTrailingWhiteSpace()
+        {  
+            string input = "   Word wrapping!   ";
             int columnWidth = 15;
-            string expected = "Word wrapping\n is cool.";
+            string expected = "Word wrapping!";
             var answer = new Answer(input, columnWidth);
             var actual = answer.Words;
 
