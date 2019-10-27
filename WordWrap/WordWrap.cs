@@ -25,17 +25,16 @@ namespace WordWrap
 
         private string GetAnswer(string words, int columnWidth)
         {
-            var inputWords = words.Trim();
-            if (inputWords.Length <= columnWidth)
+            if (words.Trim().Length <= columnWidth)
             {
-                return inputWords;
+                return words.Trim();
             }
-            else if (inputWords.Length <= columnWidth *2)
+            else
             {
                 var answerbuilder = new List<string>();
                 int columnState = columnWidth;
                 string answer;
-                foreach(var word in inputWords.Split(" "))
+                foreach(var word in words.Trim().Split(" "))
                 {
                     if( word.Length <= columnState)
                     {
@@ -50,8 +49,6 @@ namespace WordWrap
                 }
                 return answer = string.Join("", answerbuilder).Trim();
             }
-            return "";
-
         }
 
 
