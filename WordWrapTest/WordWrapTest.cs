@@ -52,6 +52,17 @@ namespace WordWrapTest
             actual.Should().Be(expected);
         }
 
+        [Fact]
+        public void GetMultipleLinesOfText(){  
+            string input = "Word wrapping is so cool! I have to keep doing it.";
+            int columnWidth = 15;
+            string expected = "Word wrapping\nis so cool! I\nhave to keep\ndoing it.";
+            var answer = new Answer(input, columnWidth);
+            var actual = answer.Words;
+
+            actual.Should().Be(expected);
+        }
+
 
     }
 
