@@ -45,7 +45,7 @@ namespace WordWrapTest
         public void GetTwoLinesOfText(){  
             string input = "Word wrapping is so cool!";
             int columnWidth = 15;
-            string expected = "Word wrapping\n is so cool!";
+            string expected = "Word wrapping\nis so cool!";
             var answer = new Answer(input, columnWidth);
             var actual = answer.Words;
 
