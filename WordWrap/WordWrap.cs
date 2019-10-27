@@ -33,7 +33,7 @@ namespace WordWrap
             {
                 var answerbuilder = new List<string>();
                 int columnState = columnWidth;
-                string answer;
+               
                 foreach(string word in words.Trim().Split(" "))
                 {
                     if( word.Length <= columnState -1 && columnState > 0)
@@ -48,7 +48,7 @@ namespace WordWrap
                         columnState -= word.Length + 1;
                     }
                 }
-                return answer = string.Join("", answerbuilder).Trim();
+                return string.Join("", answerbuilder).Trim();
             }
         }
 
